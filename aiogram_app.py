@@ -21,7 +21,7 @@ menu = types.ReplyKeyboardMarkup(resize_keyboard=True)\
     .add(types.KeyboardButton("Список слов"))
 
 @dp.message_handler(commands=["start"])
-async def gde_mama(message: types.Message):
+async def start(message: types.Message):
     tg_id = message.from_user.id
     if get_user_by_tg_id(tg_id) is None:
         insert_user(tg_id)
