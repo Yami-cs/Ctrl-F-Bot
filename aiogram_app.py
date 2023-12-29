@@ -25,7 +25,7 @@ async def start(message: types.Message):
     tg_id = message.from_user.id
     if get_user_by_tg_id(tg_id) is None:
         insert_user(tg_id)
-    await message.answer("Добро пожаловать в бота Ctrl+F! Бот создан для уведомлений по ключевым словам из телеграмм каналов. Ниже перечислены основные команды.", reply_markup=menu)
+    await message.answer("Добро пожаловать в бота Ctrl+F!\nБот создан для уведомлений по ключевым словам из телеграмм каналов.\nНиже перечислены основные команды.", reply_markup=menu)
 
 class UserAdd(StatesGroup):
     text = State()
